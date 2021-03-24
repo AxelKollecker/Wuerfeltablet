@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<f:facet name="first">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	</f:facet>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title><ui:insert name="title">Würfeltablet für Shadowrun 6</ui:insert></title>
+</h:head>
+
+<h:body id="body" styleClass="body">
+
+		<h:outputStylesheet name="css/wuerfelTablet.css" />
+
+	<p:panelGrid columns="1" columnClasses="no-padding"
+		styleClass="sr6-base-page">
+
+		<ui:insert name="pageHeader">
+		<ui:include src="header.xhtml" />
+		</ui:insert>
+
+		<ui:insert name="content" />
+	</p:panelGrid>
+</h:body>
+
+</html>

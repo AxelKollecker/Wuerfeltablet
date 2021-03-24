@@ -1,0 +1,24 @@
+<p:outputPanel xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	id="ergebnisOP"
+	styleClass="content-panel">
+
+<h:head>Ergebnisse</h:head> 
+	<p:panelGrid columns="2" layout="grid" styleClass="showcase-text-align-center">
+		
+			<h:outputText value="Anzahl Würfel:" />
+			<h:outputText value="#{würfelPool.anzahlWürfel}" />
+		
+			<h:outputText value="Anzahl Erfolge:" />
+			<h:outputText value="#{würfelPool.anzahlErfolge}" />
+			
+			<h:outputText value="Anzahl Einsen:" />
+			<h:outputText value="#{würfelPool.anzahlEinsen}" />
+		
+			<p:outputLabel id="ErgebnisListe" value="#{würfelTablet.werteAusgabe}"/>
+		
+	</p:panelGrid>
+</p:outputPanel>

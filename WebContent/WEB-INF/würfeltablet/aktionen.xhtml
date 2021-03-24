@@ -1,0 +1,18 @@
+<p:outputPanel xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core" id="aktionenOP"
+	styleClass="content-panel">
+	<p:panelGrid columns="1" style="margin-bottom:10px" cellpadding="5">		
+		<p:commandButton value="Einen Nichterfolg neu Würfeln" styleClass="command-button" id="EinenNichterfolgNeuWürfeln" immediate="true" actionListener="#{würfelTablet.btnEinenNichterfolgNeuWürfeln}"
+										update=":form:edgePoolGrößeOL :form:ergebnisOP, :form:MitEdgeWürfeln :form:aktionenOP" disabled="#{!würfelTablet.btnEinenNichterfolgNeuWürfelnEnabled}"/>					
+ 		<p:commandButton value="Einen Würfel von eins auf zwei drehen" styleClass="command-button" id="EinenWürfelVonEinsAufZweiDrehen" immediate="true" actionListener="#{würfelTablet.btnEinenWürfelVonEinsAufZweiDrehen}" 
+  										update=":form:edgePoolGrößeOL :form:ergebnisOP, :form:MitEdgeWürfeln" disabled="#{!würfelTablet.btnEinenWürfelVonEinsAufZweiDrehenEnabled}"/>
+ 		<p:commandButton value="Einen Würfel von vier auf fünf drehen" styleClass="command-button" id="EinenWürfelVonEinAufZweiDrehen" immediate="true" actionListener="#{würfelTablet.btnEinenWürfelVonVierAufFünfDrehen}" 
+  										update=":form:edgePoolGrößeOL  :form:ergebnisOP :form:MitEdgeWürfeln :form:aktionenOP" disabled="#{!würfelTablet.btnEinenWürfelVonVierAufFünfDrehenEnabled}"/>
+  		<p:commandButton value="Nichterfolge neu würfeln" styleClass="command-button" id="NichterfolgeNeuWürfeln" immediate="true" actionListener="#{würfelTablet.btnNichterfolgeNeuWürfeln}" 
+  										update=":form:edgePoolGrößeOL  :form:ergebnisOP :form:MitEdgeWürfeln :form:aktionenOP" disabled="#{!würfelTablet.btnNichterfolgeNeuWürfelnEnabled}"/>																
+	</p:panelGrid>	
+	
+</p:outputPanel>

@@ -1,0 +1,468 @@
+@charset "ISO-8859-1";
+/*csslint adjoining-classes:false, box-sizing:false, box-model:false, ids:false, important:false, overqualified-elements:false, universal-selector:false*/
+.ui-accordion .ui-accordion-content {
+	overflow: hidden;
+}
+
+.ui-selectonemenu .ui-selectonemenu-trigger {
+	width: 8px !important;
+}
+
+.ui-blockui,.ui-blockui-content {
+	position: fixed;
+	z-index: 9999;
+}
+
+.artikelBezText {
+	width: 100%;
+}
+
+.ui-panel {
+	padding: 0em !important;
+}
+
+.sw-version {
+	color: #ededed;
+}
+
+.artikelDetails {
+	height: 800px;
+	padding: 0px !important;
+}
+
+.impressumBox {
+	position: fixed;
+	top: 50%;
+	left: 60%;
+}
+
+.impressumLbl {
+	width: 80px;
+	height: 40px;
+}
+
+.impressumData {
+	width: 250px;
+}
+
+.top {
+	top: 100%;
+}
+/* for update only*/
+.toolbar {
+	
+}
+
+.imageBox {
+	cursor: pointer;
+}
+
+.input-text-column {
+	height: 20px !important;
+}
+
+
+.artikelTypeCombo {
+	width: 130px;
+	height: 20px;
+	vertical-align: middle;
+	top: 2px;
+}
+
+.ui-datatable-scrollable-header-box {
+	overflow: hidden;
+	margin-right: 17px;
+}
+
+ui-datatable-header-box {
+	margin-right: 17px !important;
+}
+
+.ui-datatable-scrollable .ui-datatable-scrollable-header,.ui-datatable-scrollable .ui-datatable-scrollable-footer
+	{
+	background-color: #E4E4E5;
+	overflow: hidden;
+}
+
+.ui-datatable .ui-datatable-scrollable-body .ui-datatable-data td {
+	height: 16px;
+	line-height: 16px;
+}
+
+.ui-datatable thead th,.ui-datatable tbody td,.ui-datatable tfoot td,.ui-datatable tfoot th
+	{
+	padding: 1px 2px !important;
+}
+
+.ui-blockui-content {
+	background-color: white;
+	top: 100% !important;
+}
+
+.ui-widget-content {
+	border: none !important;
+}
+
+.ui-datalist-content {
+	padding: 0;
+	border: none;
+	background-color: transparent;
+}
+
+.ui-datagrid-content,.ui-dialog-footer,.ui-datalist-content,.ui-datalist-content table tbody,.ui-datalist-content table tbody tr,.ui-datalist-content table tbody tr td
+	{
+	border-color: transparent;
+}
+
+/* .ui-dialog-titlebar .ui-icon, .ui-lightbox-close .ui-icon { */
+/* 	background-image: url("#{resource['images:util.png']}") !important; */
+/* 	background-position: -96px -128px; */
+/* } */
+
+
+.ui-icon {
+	border-radius: 0;
+}
+
+.ui-outputlabel-block {
+	height: 15px;
+	display: block;
+}
+
+.ui-overlaypanel-content {
+	padding: 0;
+	font-size: 115%;
+}
+
+.ui-overlaypanel-content .ui-panel {
+	padding-top: 0;
+}
+
+.ui-panel .ui-panel-titlebar {
+	background-color: #E4E4E5;
+	border-bottom: 1px dotted #D3D6D9;
+}
+
+.ui-panelgrid {
+	max-width: 100%;
+	border: none;
+}
+
+.ui-panelgrid .ui-panelgrid-cell {
+	border: none;
+	padding: 0px !important;
+}
+
+.ui-panelgrid-footer .ui-widget-header {
+	background: none;
+}
+
+.ui-panel .ui-panel-content {
+	padding: 1px 2px !important;
+	background-color: #E4E4E5;
+}
+
+.ui-accordion,.ui-accordion.ui-helper-reset {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: transparent;
+}
+
+.ui-datatable {
+	background-color: transparent;
+	padding: 0;
+}
+
+.ui-icon-triangle-1-s {
+	background-color: transparent !important;
+	background-repeat: no-repeat !important;
+	background-position: center !important;
+	background-image: url("#{resource['images:arrow_dropdown.png']}")
+		!important;
+}
+
+.ui-datatable table {
+	table-layout: fixed;
+}
+
+.ui-datatable .ui-datatable-data .ui-panelgrid td {
+	border: none !important;
+}
+
+.content-panel .ui-panel-content {
+	border-top: none !important;
+}
+
+.ui-panel {
+	background-color: transparent;
+}
+
+.ui-panel .ui-panel-title {
+	font-weight: normal !important;
+	font-size: 150% !important;
+	font-family: 'VW_Sans', Verdana, Arial, "Arial MT",
+		sans-serif !important;
+}
+
+a,.ui-commandlink {
+	font-size: 12px;
+}
+
+.ui-layout-pane {
+	border: 0;
+}
+
+.ui-tabs .ui-tabs-panel {
+	padding: 0em;
+}
+
+.ui-tabs ul.ui-tabs-nav li {
+	background-color: #7F1133;
+}
+
+.ui-tabs {
+	padding: 0em;
+}
+
+.sr6-base-page {
+	width: 1600px;
+	margin: 0 auto;
+}
+
+body {
+	background-color: white;
+	font-size: 10px;
+	font-family: 'VW_Sans', Verdana, Arial, "Arial MT", sans-serif;
+	margin-top: 5px;
+	width: 100%;
+	line-height: normal !important;
+}
+
+.ui-datatable-scrollable-body {
+	overflow-y: scroll !important;
+}
+
+.content-panel {
+	padding: 0;
+	margin-bottom: 7px;
+}
+
+.content-panel .ui-panel-titlebar {
+	background-color: #E4E4E5;
+	border-bottom: 1px dotted #D3D6D9;
+	width: 100%;
+}
+
+.mun-header,.ui-panelgrid .mun-header,.mun-datatable th,.mun-datatable th.ui-state-default
+	{
+	background: transparent;
+	background-color: #E4E4E5;
+	border-width: none;
+	border-style: none none;
+	text-align: left;
+	font-weight: normal;
+	font-size: 110%;
+}
+
+.mun-datatable table tbody td,.mun-datatable tbody {
+	border: none;
+}
+
+.mun-datatable .ui-panelgrid .mun-datatable-content {
+	border-color: -moz-use-text-color -moz-use-text-color #EBCED7 !important;
+	border-width: thin thin 1px;
+}
+
+.ui-datatable .ui-datatable-header {
+	font-size: 120%;
+	background-color: #E4E4E5;
+}
+
+.mun-katalog-list .ui-datatable-odd {
+	background-color: transparent;
+}
+
+.titelHeader {
+	border: none;
+	height: 195px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image:
+		url("#{resource['images:arbeitsschutz_top_1200.jpg']}");
+	text-align: center !important;
+}
+
+.wtTitleHeader {
+	background: transparent;
+	padding: 100px 0px 25px 0px !important;
+	font-size: 28px !important;
+}
+
+.titleColumn {
+	min-height: 195px;
+	width: 100% !important;
+	color: white;
+}
+
+.transparentBackground tr,.transparentBackground td {
+	background: transparent !important;
+}
+
+.headerBar {
+	text-align: right !important;
+}
+
+.downloadIcon {
+	border: none;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url("#{resource['images:download.png']}") !important;
+}
+
+.mun-datatable-row-header {
+	float: left;
+}
+
+.mun-datatable tr .ui-state-highlight {
+	background: none;
+	border: none;
+	text-shadow: none;
+	color: inherit;
+}
+
+.ui-state-highlight,.ui-widget-content .ui-state-highlight,.ui-widget-header .ui-state-highlight
+	{
+	background-color: grey !important;
+}
+
+.root-data-model {
+	background-color: #7F1133;
+	color: white;
+}
+
+.parent-data-model {
+	background-color: #98153e;
+	color: white;
+}
+
+.ui-widget-content .ui-state-highlight .parent-data-model,.ui-widget-content .ui-state-highlight .root-data-model
+	{
+	background-color: grey !important;
+}
+
+.navigationPanel {
+	width: 280px !important;
+	display: block;
+}
+
+.contentPanel {
+	width: 1600px !important;
+	vertical-align: top;
+}
+
+.materialTableLegend {
+	text-align: right !important;
+	background: #e3e3e3 !important;
+	font-weight: normal;
+}
+
+.ui-datatable tr.ui-datatable-even:hover,.ui-datatable tr.ui-datatable-odd:hover
+	{
+	background: #EBCED7;
+}
+
+.active:hover {
+	background-color: #EBCED7 !important;
+	text-decoration: underline;
+}
+
+.defaultLink {
+	text-decoration: none;
+}
+
+.ui-datatable thead th {
+	padding: 0px 1px;
+}
+
+.ui-blockui,.ui-blockui-content {
+	position: absolute;
+	z-index: 9999;
+}
+
+.ui-panel {
+	padding: 0em;
+}
+
+.no-padding,.no-padding-cells tr td,.info-column {
+	padding: 0 !important;
+}
+
+.left,.left input {
+	text-align: left !important;
+}
+
+.right {
+	text-align: right !important;
+}
+
+.center,.center input {
+	text-align: center !important;
+}
+
+.rightfloat {
+	float: right;
+}
+
+.centerfloat {
+	float: center;
+}
+
+.hidden {
+	display: none;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.scrollable {
+	overflow: auto;
+}
+
+.no-style-attachment-button {
+	padding: 0;
+	background: none ! important;
+	border: 0px !important;
+	background-repeat: no-repeat;
+	vertical-align: top;
+	height: 1.6em;
+	left: 9px;
+	padding: 3px 6px 4px 5px;
+	width: 1.8em;
+	margin-left: 2px;
+	background-repeat: no-repeat;
+}
+
+.linkesPanel{
+	width:35%;
+	min-height: 1000px;
+	height:auto !important;
+	height: 1000px;
+	float:left;
+}
+.rechtesPanel{
+	width:65%;
+	min-height: 1000px;
+	height:auto !important;
+	height: 1000px;
+	float:right;
+}
+.ui-panelgrid.showcase-text-align-center .ui-grid-responsive .ui-panelgrid-cell {
+        text-align: center;
+    }
+
+    .customPanelGrid .ui-panelgrid-content {
+        align-items: center;
+    }
