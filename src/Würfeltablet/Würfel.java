@@ -35,7 +35,7 @@ public class Würfel implements Serializable{
     
     private void berechnen() {
 	this.aufZweiDrehbar = istAufZweiDrehbar();
-	this.aufFünfDrehbar = istAufZweiDrehbar();
+	this.aufFünfDrehbar = istAufFünfDrehbar();
 	this.erfolg = istErfolg();
 	this.nichterfolg = istNichterfolg();
 	this.explodierenMöglich = istExplodierenMöglich();

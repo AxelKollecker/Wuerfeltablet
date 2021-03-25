@@ -208,20 +208,20 @@ public class WürfelPool implements Serializable{
 		for (Würfel w : würfelPool) {
 		    if(w.isAufZweiDrehbar()) {
 		    	w.drehen();
-				berechnen();
 				break;
 		    }
 		}
+		berechnen();
     }
     
     public void einenWürfelVonVierAufFünfDrehen() {
 	for (Würfel w : würfelPool) {
-	    if(w.isAufZweiDrehbar()) {
-		w.drehen();
+	    if(w.isAufFünfDrehbar()) {
+	    	w.drehen();
+	    	break;
+	    	}
+		}
 		berechnen();
-		break;
-	    }
-	}
     }
 
     public int getMaxWürfel() {

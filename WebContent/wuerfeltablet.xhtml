@@ -8,39 +8,43 @@
 <f:view contentType="text/html" >
 <ui:composition template="WEB-INF/templates/page-template.xhtml">
 	<ui:define name="content">
-		<h:form id="form"  style=" width: 100%">
+		<h:form id="form"  style=" width: 1080px%">
 			<p:growl id="msgs" showDetail="true" />
 			<p:panel styleClass="content-panel"> 
-				<p:panelGrid id="eingabePG" colums ="7" style="margin-bottom:10px" cellpadding="15" columClasses=".ui-outputlabel-block, .input-text-column, .ui-outputlabel-block, .input-text-column, .ui-outputlabel-block"> 
-<!-- 					<p:graphicImage url="/resources/images/SR6.png" style="width:10% height=10%"/> -->
-					<p:outputLabel for="WürfelPoolGröße" value="Würfelpoolgröße: " widdth="20%"/>
-					<p:selectOneMenu id="WürfelPoolGröße" value="#{würfelTablet.würfelPoolGröße}" width="20%">
-<!-- 						<f:selectItem itemLabel="#{würfelTablet.würfelPoolGröße}" itemValue="" noSelectionOption="true"/> -->
-						<f:selectItems value="#{würfelTablet.selectOneMenuWPG}" update="Ergebnis" width="10%"/>
-						<p:ajax event="itemSelect" listener="#{würfelTablet.onWürfelPoolGrößeChange}" update=":form:ergebnisOP"/>
-					</p:selectOneMenu>
-					<p:outputLabel for="EdgeAttribute" value="EdgeAttribute" width="20%"/>
-					<p:selectOneMenu id="EdgeAttribute" value="#{würfelTablet.edgeAttribute}">
-						<p:ajax event="itemSelect" listener="#{würfelTablet.onEdgeAttributeChange}" update=":form:edgePoolGrößeOL :form:EdgePoolPlusEins :form:MitEdgeWürfeln :form:aktionenOP"/>
-						<f:selectItem itemLabel="#{würfelTablet.edgeAttribute}" itemValue="" noSelectionOption="true" width="10%"/>
-						<f:selectItems value="#{würfelTablet.selectOneMenuEA}"/>
-					</p:selectOneMenu>
-					<h:outputText value = "EdgePool: " width="30%"/>
-					<p:outputLabel id="edgePoolGrößeOL" name="edgePoolGrößeOL" value="#{würfelTablet.edgePoolGröße}" />
-  					<p:commandButton value="EdgePool erhöhen" styleClass="command-button" id="EdgePoolPlusEins" immediate="true" actionListener="#{würfelTablet.edgePoolPlusEins}" 
-  										update=":form:edgePoolGrößeOL :form:MitEdgeWürfeln form:ergebnisOP :form:aktionenOP" disabled="#{!würfelTablet.btnPlusEinEdgeEnabled}"/>
-					<p:commandButton value="mit Edge würfeln" styleClass="command-button" id="MitEdgeWürfeln" immediate="true" actionListener="#{würfelTablet.btnMitEdgeWürfeln}" 
-  										update=":form:edgePoolGrößeOL :form:MitEdgeWürfeln :form:ergebnisOP :form:aktionenOP" disabled="#{!würfelTablet.btnMitEdgeWürfelnEnabled}"/>
-					<p:commandButton value="würfeln" styleClass="command-button" id="Würfeln" immediate="true" actionListener="#{würfelTablet.btnWürfeln}" update=":form:ergebnisOP :form:aktionenOP"/>
-				</p:panelGrid>	
+				<p:panelGrid id="main" columns="2" layout="grid" styleClass="showcase-text-align-left, showcase-text-align-left">
+					<p:graphicImage value="#{resource['images:SR6.png']}" width="20%"/> 
+					<p:toolbar>
+						<p:toolbarGroup align="right">
+							<p:outputLabel for="WürfelPoolGröße" value="Würfelpoolgröße: " width="20%"/>
+							<p:selectOneMenu id="WürfelPoolGröße" value="#{würfelTablet.würfelPoolGröße}" width="20%">
+								<f:selectItems value="#{würfelTablet.selectOneMenuWPG}" update="Ergebnis" width="10%"/>
+								<p:ajax event="itemSelect" listener="#{würfelTablet.onWürfelPoolGrößeChange}" update=":form:ergebnisOP"/>
+							</p:selectOneMenu> 
+							<p:outputLabel for="EdgeAttribute" value="EdgeAttribute" width="20%"/>
+							<p:selectOneMenu id="EdgeAttribute" value="#{würfelTablet.edgeAttribute}">
+								<p:ajax event="itemSelect" listener="#{würfelTablet.onEdgeAttributeChange}" update=":form:edgePoolGrößeOL :form:EdgePoolPlusEins :form:MitEdgeWürfeln :form:aktionenOP"/>
+								<f:selectItem itemLabel="#{würfelTablet.edgeAttribute}" itemValue="" noSelectionOption="true" width="10%"/>
+								<f:selectItems value="#{würfelTablet.selectOneMenuEA}"/>
+							</p:selectOneMenu>
+							<h:outputText value = "EdgePool: " width="30%"/>
+							<p:outputLabel id="edgePoolGrößeOL" name="edgePoolGrößeOL" value="#{würfelTablet.edgePoolGröße}" />
+	  						<p:commandButton value="EdgePool erhöhen" styleClass="command-button" id="EdgePoolPlusEins" immediate="true" actionListener="#{würfelTablet.edgePoolPlusEins}" 
+	  										update=":form:edgePoolGrößeOL :form:MitEdgeWürfeln form:ergebnisOP :form:aktionenOP" disabled="#{!würfelTablet.btnPlusEinEdgeEnabled}"/>
+							<p:commandButton value="mit Edge würfeln" styleClass="command-button" id="MitEdgeWürfeln" immediate="true" actionListener="#{würfelTablet.btnMitEdgeWürfeln}" 
+	  										update=":form:edgePoolGrößeOL :form:MitEdgeWürfeln :form:ergebnisOP :form:aktionenOP" disabled="#{!würfelTablet.btnMitEdgeWürfelnEnabled}"/>
+							<p:commandButton value="würfeln" styleClass="command-button" id="Würfeln" immediate="true" actionListener="#{würfelTablet.btnWürfeln}" update=":form:ergebnisOP :form:aktionenOP"/>
+						</p:toolbarGroup>
+					</p:toolbar>
 
-				<p:panelGrid columns="2" columnClasses="navigationPanel, contentPanel" >
-					<p:column>
-						<ui:include src="WEB-INF/würfeltablet/ergebnis.xhtml"/>
-					</p:column>
-					<p:column>
-						<ui:include src="WEB-INF/würfeltablet/aktionen.xhtml" />
-					</p:column>
+	
+					<p:panelGrid columns="2" columnClasses="navigationPanel, contentPanel" >
+						<p:column>
+							<ui:include src="WEB-INF/würfeltablet/ergebnis.xhtml"/>
+						</p:column>
+						<p:column>
+							<ui:include src="WEB-INF/würfeltablet/aktionen.xhtml" />
+						</p:column>
+					</p:panelGrid>
 				</p:panelGrid>
 			</p:panel>
 	</h:form>

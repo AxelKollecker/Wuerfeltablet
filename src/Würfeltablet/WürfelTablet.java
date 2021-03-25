@@ -99,7 +99,7 @@ public class WürfelTablet implements Serializable{
     }
     
     private boolean würfelDrehbar() {
-	if (wp.isDrehbar() && ep.isWürfelWürfelbar() && !einenWürfelNeuGewürfelt && !nichterfolgeNeuGewürfelt
+	if (wp.isDrehbar() && ep.isWürfelDrehbar() && !einenWürfelNeuGewürfelt && !nichterfolgeNeuGewürfelt
 		&& !mitEdgeGewürfelt) {
 	    return true;
 	}
@@ -109,8 +109,8 @@ public class WürfelTablet implements Serializable{
     }
     
     private boolean einWürfelVonEinsAufZweiDrehbar() {
-    	if (wp.isEinWürfelAufZweiDrehbar() && ep.isWürfelWürfelbar() && !nichterfolgeNeuGewürfelt
-    		&& !mitEdgeGewürfelt) {
+    	if (wp.isEinWürfelAufZweiDrehbar() && ep.isWürfelDrehbar() && !nichterfolgeNeuGewürfelt
+    		&& !mitEdgeGewürfelt && !einenWürfelNeuGewürfelt) {
     	    return true;
     	}
     	else {
@@ -119,8 +119,8 @@ public class WürfelTablet implements Serializable{
     }
     
     private boolean einWürfelVonVierAufFünfDrehbar() {
-    	if (wp.isEinWürfelAufFünfDrehbar() && ep.isWürfelWürfelbar() && !nichterfolgeNeuGewürfelt
-    		&& !mitEdgeGewürfelt) {
+    	if (wp.isEinWürfelAufFünfDrehbar() && ep.isWürfelDrehbar() && !nichterfolgeNeuGewürfelt
+    		&& !mitEdgeGewürfelt && !einenWürfelNeuGewürfelt) {
     	    return true;
     	}
     	else {
@@ -193,6 +193,7 @@ public class WürfelTablet implements Serializable{
 		    ep.würfelNeuWürfeln();
 		    einenWürfelNeuGewürfelt = true;
 		    edgePoolGröße = ep.getWert();
+		    berechnen();
 		}
     }
     
@@ -337,6 +338,9 @@ public class WürfelTablet implements Serializable{
     public void btnEinenWürfelVonVierAufFünfDrehen(ActionEvent actionEvent) {
     	if (actionEvent.getComponent().getId().equals("EinenWürfelVonVierAufFünfDrehen")) {
     		einenWürfelVonVierAufFünfDrehen();
+    	}
+    	else {
+    		System.out.println(actionEvent.getComponent().getId().toString());
     	}
     }
     
