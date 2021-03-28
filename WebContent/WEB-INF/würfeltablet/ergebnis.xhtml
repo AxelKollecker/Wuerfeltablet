@@ -6,19 +6,37 @@
 	id="ergebnisOP"
 	styleClass="content-panel">
 
-<h:head>Ergebnisse</h:head> 
-	<p:panelGrid columns="2" layout="grid" styleClass="showcase-text-align-center">
-		
-			<h:outputText value="Anzahl Würfel:" />
-			<h:outputText value="#{würfelPool.anzahlWürfel}" />
-		
-			<h:outputText value="Anzahl Erfolge:" />
-			<h:outputText value="#{würfelPool.anzahlErfolge}" />
-			
-			<h:outputText value="Anzahl Einsen:" />
-			<h:outputText value="#{würfelPool.anzahlEinsen}" />
-		
-			<p:outputLabel id="ErgebnisListe" value="#{würfelTablet.werteAusgabe}"/>
-		
-	</p:panelGrid>
+	<div class="ui-grind ui-grid-responsive">
+
+ 				<h4> Ergebnisse</h4>
+				<div class="ui-grind ui-grid-responsive">
+					<div class="ui-grid-row">
+						<div class="ui-grid-col-4">
+							<h:outputText value = "Anzahl Würfel: "/>
+							<p:outputLabel id="anzahlWürfelOL" name="AnzahlWürfwlOL" value="#{würfelPool.anzahlWürfel}" />
+						</div>
+					</div>
+					<div class="ui-grid-row">
+						<div class="ui-grid-col-4">
+							<h:outputText value="Anzahl Erfolge: " />
+							<p:outputLabel id="anzahlErfolgeOL" name="AnzahlErfolgelOL" value="#{würfelPool.anzahlErfolge}" />
+						</div>
+					</div>
+					<div class="ui-grid-row">
+						<div class="ui-grid-col-4">
+							<h:outputText value="Anzahl Einsen: " />
+							<p:outputLabel id="anzahlEinsemOL" name="AnzahlEinsenOL" value="#{würfelPool.anzahlEinsen}" />
+						</div>
+					</div>
+				</div>
+				<div class="ui-grid-row">
+					<div class="ui-grid-col-12">
+						<h:outputText value="Würfelergebnisse: " />
+					</div>
+					<div>
+						<p:outputLabel id="ErgebnisListe" value="#{würfelTablet.werteAusgabe}"/>
+					</div>
+				</div>
+
+	</div>
 </p:outputPanel>
