@@ -43,14 +43,14 @@ public class WürfelTablet implements Serializable{
     private EdgePool ep;
     
     @PostConstruct
-    public void init (){
-	wp.setPoolGröße(1);
-	würfelPoolGröße = 1;
-	edgeAttribute = minEdgeAttribute;
-	edgePoolGröße = minEdgeAttribute;
-	ep.setWert(minEdgeAttribute);
-	bereinigen();
-	selectOneMenuWerteSetzen();
+	    public void init (){
+		wp.setPoolGröße(1);
+		würfelPoolGröße = 1;
+		edgeAttribute = minEdgeAttribute;
+		edgePoolGröße = minEdgeAttribute;
+		ep.setWert(minEdgeAttribute);
+		bereinigen();
+		selectOneMenuWerteSetzen();
     }
     
     private void selectOneMenuWerteSetzen() {
@@ -65,14 +65,14 @@ public class WürfelTablet implements Serializable{
 	}
 
 	private void bereinigen() {
-	würfelDrehbar = false;
-	würfelGedreht = false;
-	würfelNeuWürfelbar = false;
-	einenWürfelNeuGewürfelt = false;
-	nichterfolgeNeuWürfelbar = false;
-	nichterfolgeNeuGewürfelt = false;
-	mitEdgeWürfelbar = false;
-	mitEdgeGewürfelt = false;
+		würfelDrehbar = false;
+		würfelGedreht = false;
+		würfelNeuWürfelbar = false;
+		einenWürfelNeuGewürfelt = false;
+		nichterfolgeNeuWürfelbar = false;
+		nichterfolgeNeuGewürfelt = false;
+		mitEdgeWürfelbar = false;
+		mitEdgeGewürfelt = false;
     }
     
     public void berechnen() {

@@ -77,84 +77,84 @@ public class WürfelPool implements Serializable{
     }
     
     public void berechnen() {
-	this.anzahlWürfel = würfelPool.size();
-	this.anzahlErfolge = anzahlErfolgeBerechnen();
-	this.anzahlEinsen = anzahlEinsenBerechnen();
-	this.glitch = istGlitch();
-	this.kritischerGlitch = istKritischerGlitch();
-	this.einWürfelAufZweiDrehbar = istEinWürfelAufZweiDrehbar();
-	this.einWürfelAufFünfDrehbar = istEinWürfelAufFünfDrehbar1();
-	this.nachwürfelbar = istNachwürfelbar();
+		this.anzahlWürfel = würfelPool.size();
+		this.anzahlErfolge = anzahlErfolgeBerechnen();
+		this.anzahlEinsen = anzahlEinsenBerechnen();
+		this.glitch = istGlitch();
+		this.kritischerGlitch = istKritischerGlitch();
+		this.einWürfelAufZweiDrehbar = istEinWürfelAufZweiDrehbar();
+		this.einWürfelAufFünfDrehbar = istEinWürfelAufFünfDrehbar1();
+		this.nachwürfelbar = istNachwürfelbar();
     }
 
     private int anzahlErfolgeBerechnen() {
-	int ergebnis = 0;
-	for (Würfel w : würfelPool) {
-	    if (w.isErfolg()) {
-		ergebnis++;
-	    }
-	}
-	return ergebnis;
+		int ergebnis = 0;
+		for (Würfel w : würfelPool) {
+		    if (w.isErfolg()) {
+			ergebnis++;
+		    }
+		}
+		return ergebnis;
     }
 
     private int anzahlEinsenBerechnen() {
-	int einsen = 0;
-	for (Würfel w : würfelPool) {
-	    if (w.isGlitchMöglich() && ! w.isMitEdgeGewürfelt()) {
-		einsen++;
-	    }
-	}
-	return einsen;
+		int einsen = 0;
+		for (Würfel w : würfelPool) {
+		    if (w.isGlitchMöglich() && ! w.isMitEdgeGewürfelt()) {
+			einsen++;
+		    }
+		}
+		return einsen;
     }
     
     private boolean istGlitch() {
-	if (anzahlEinsen > (würfelPool.size() / 2) ) {
-	    return true;
-	}
-	else {
-	    return false;
-	}
+		if (anzahlEinsen > (würfelPool.size() / 2) ) {
+		    return true;
+		}
+		else {
+		    return false;
+		}
     }
 
     private boolean istKritischerGlitch() {
-	if (anzahlErfolge == 0 && istGlitch()) {
-	    return true;
-	}
-	else {
-	    return false;
-	}
+		if (anzahlErfolge == 0 && istGlitch()) {
+		    return true;
+		}
+		else {
+		    return false;
+		}
     }
 
     private boolean istEinWürfelAufZweiDrehbar() {
-	boolean ergebnis = false;
-	for (Würfel w : würfelPool) {
-	    if (w.isAufZweiDrehbar()) {
-		ergebnis = true;
-		break;
-	    }
-	}
-	return ergebnis;
+		boolean ergebnis = false;
+		for (Würfel w : würfelPool) {
+		    if (w.isAufZweiDrehbar()) {
+			ergebnis = true;
+			break;
+		    }
+		}
+		return ergebnis;
     }
     
     private boolean istEinWürfelAufFünfDrehbar1() {
-	boolean ergebnis = false;
-	for (Würfel w : würfelPool) {
-	    if (w.isAufFünfDrehbar()) {
-		ergebnis = true;
-		break;
-	    }
-	}
-	return ergebnis;
+		boolean ergebnis = false;
+		for (Würfel w : würfelPool) {
+		    if (w.isAufFünfDrehbar()) {
+			ergebnis = true;
+			break;
+		    }
+		}
+		return ergebnis;
     }
 
 
     private boolean istNachwürfelbar() {
-	if (anzahlErfolge < anzahlWürfel) {
-	    return true;
-	}
-	else {
-	    return false;
-	}
+		if (anzahlErfolge < anzahlWürfel) {
+		    return true;
+		}
+		else {
+		    return false;
+		}
     }
     
     public void würfeln() {
@@ -264,6 +264,15 @@ public class WürfelPool implements Serializable{
 	public int getAnzahlEinsen() {
 		return anzahlEinsen;
 	}
+
+	public boolean isGlitch() {
+		return glitch;
+	}
+
+	public boolean isKritischerGlitch() {
+		return kritischerGlitch;
+	}
     
+	
     
 }

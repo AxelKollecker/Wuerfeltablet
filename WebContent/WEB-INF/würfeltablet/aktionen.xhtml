@@ -4,25 +4,28 @@
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:f="http://java.sun.com/jsf/core" id="aktionenOP"
 	styleClass="content-panel">
-	<div class="ui-grind ui-grid-responsive">
-		<div class="ui-grid-col-1"></div>
-		<div class="ui-grid-col-10"></div>
+	<div class="ui-grind ui-grid-responsive" align="center">
 			<div class="ui-grid-row">					
 					<p:commandButton value="Einen Nichterfolg neu Würfeln" styleClass="command-button" id="EinenNichterfolgNeuWürfeln" immediate="true" actionListener="#{würfelTablet.btnEinenNichterfolgNeuWürfeln}"
-													update=":form:edgePoolGrößeOL :form:ergebnisOP, :form:MitEdgeWürfeln :form:aktionenOP" disabled="#{!würfelTablet.btnEinenNichterfolgNeuWürfelnEnabled}"/>								 		
+													update=":form:edgePoolGrößeOL :form:ergebnisOP, :form:MitEdgeWürfeln :form:aktionenOP :form:KritischerGlitchOL :form:GlitchOL" 
+													disabled="#{!würfelTablet.btnEinenNichterfolgNeuWürfelnEnabled}" />								 		
 	 		</div>
 		 	<div class="ui-grid-row">			 		
 			 		<p:commandButton value="Einen Würfel von eins auf zwei drehen" styleClass="command-button" id="EinenWürfelVonEinsAufZweiDrehen" immediate="true" actionListener="#{würfelTablet.btnEinenWürfelVonEinsAufZweiDrehen}" 
-		  											update=":form:edgePoolGrößeOL :form:ergebnisOP, :form:MitEdgeWürfeln" disabled="#{!würfelTablet.btnEinenWürfelVonEinsAufZweiDrehenEnabled}"/>					
+		  											update=":form:edgePoolGrößeOL :form:ergebnisOP, :form:MitEdgeWürfeln :form:KritischerGlitchOL :form:GlitchOL" 
+		  											disabled="#{!würfelTablet.btnEinenWürfelVonEinsAufZweiDrehenEnabled}"/>					
 			</div>
 		 	<div class="ui-grid-row">			 		
 		 			<p:commandButton value="Einen Würfel von vier auf fünf drehen" styleClass="command-button" id="EinenWürfelVonVierAufFünfDrehen" immediate="true" actionListener="#{würfelTablet.btnEinenWürfelVonVierAufFünfDrehen}" 
-		  											update=":form:edgePoolGrößeOL  :form:ergebnisOP :form:MitEdgeWürfeln :form:aktionenOP" disabled="#{!würfelTablet.btnEinenWürfelVonVierAufFünfDrehenEnabled}"/>					
+		  											update=":form:edgePoolGrößeOL  :form:ergebnisOP :form:MitEdgeWürfeln :form:aktionenOP :form:KritischerGlitchOL :form:GlitchOL" 
+		  											disabled="#{!würfelTablet.btnEinenWürfelVonVierAufFünfDrehenEnabled}"/>					
 		  	</div>
-		  	<div class="ui-grid-row">			  		
-		  			<p:commandButton value="Nichterfolge neu würfeln" styleClass="command-button" id="NichterfolgeNeuWürfeln" immediate="true" actionListener="#{würfelTablet.btnNichterfolgeNeuWürfeln}" 
-	  											update=":form:edgePoolGrößeOL  :form:ergebnisOP :form:MitEdgeWürfeln :form:aktionenOP" disabled="#{!würfelTablet.btnNichterfolgeNeuWürfelnEnabled}"/>																					
-			</div>
-			<div class="ui-grid-col-1"></div>
-			</div>
+		  	<div class="ui-grid-row">		
+		  	<div class="ui-grid-row">	  		
+		  			<p:commandButton style="zbv" value="Nichterfolge neu würfeln" styleClass="command-button" id="NichterfolgeNeuWürfeln" immediate="true" actionListener="#{würfelTablet.btnNichterfolgeNeuWürfeln}" 
+	  											update=":form:edgePoolGrößeOL  :form:ergebnisOP :form:MitEdgeWürfeln :form:aktionenOP :form:KritischerGlitchOL :form:GlitchOL" 
+	  											disabled="#{!würfelTablet.btnNichterfolgeNeuWürfelnEnabled}"/>																					
+				</div>
+			</div>	
+		</div>
 </p:outputPanel>

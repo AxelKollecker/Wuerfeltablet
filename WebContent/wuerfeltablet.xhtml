@@ -29,7 +29,6 @@
 									<p:outputLabel for="EdgeAttribute" value="EdgeAttribute"/>
 									<p:selectOneMenu id="EdgeAttribute" value="#{würfelTablet.edgeAttribute}">
 										<p:ajax event="itemSelect" listener="#{würfelTablet.onEdgeAttributeChange}" update=":form:edgePoolGrößeOL :form:EdgePoolPlusEins :form:MitEdgeWürfeln :form:aktionenOP"/>
-										<f:selectItem itemLabel="#{würfelTablet.edgeAttribute}" itemValue="" noSelectionOption="true" width="10%"/>
 										<f:selectItems value="#{würfelTablet.selectOneMenuEA}"/>
 									</p:selectOneMenu>
 								</div>
@@ -46,17 +45,25 @@
 					  										update=":form:edgePoolGrößeOL :form:MitEdgeWürfeln :form:ergebnisOP :form:aktionenOP" disabled="#{!würfelTablet.btnMitEdgeWürfelnEnabled}"/>
 								</div>
 								<div class="ui-grid-col-2">
-												<p:commandButton value="würfeln" styleClass="command-button" id="Würfeln" immediate="true" actionListener="#{würfelTablet.btnWürfeln}" update=":form:ergebnisOP :form:aktionenOP"/>
+												<p:commandButton value="würfeln" styleClass="command-button" id="Würfeln" immediate="true" actionListener="#{würfelTablet.btnWürfeln}" update=":form:ergebnisOP :form:aktionenOP :form:KritischerGlitchOL :form:GlitchOL"/>
 									</div>				
 							</div>
 							<div class="ui-grid-row">
-								<div class="ui-grid-col-8">
+								<div class="ui-grid-col-9">
  									<ui:include src="WEB-INF/würfeltablet/ergebnis.xhtml"/>
 								</div>
-								<div class="ui-grid-col-4">
+								<div class="ui-grid-col-3">
 									<ui:include src="WEB-INF/würfeltablet/aktionen.xhtml" />
 								</div>								
 							</div>	
+							<div class="glitch">
+								<div class="ui-grid-col-3">
+									<p:outputLabel id="GlitchOL" value="Glitch" styleClass="#{(würfelPool.glitch ? 'glitch-btn-alarm' : 'glitch-button-normal')}" />
+								</div>
+								<div class="ui-grid-col-3">
+									<p:outputLabel id="KritischerGlitchOL" value="KRITISCHER Glitch!" styleClass="#{(würfelPool.kritischerGlitch ? 'glitch-btn-alarm' : 'glitch-button-normal')}" />
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

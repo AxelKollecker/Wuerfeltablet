@@ -13,7 +13,7 @@
 	border: 1px solid #dddddd;
 	padding: 10px 0;
 	text-align: center;
-	font-size: 90%;
+	font-size: 70% !important;
 }
 
 .ui-blockui,.ui-blockui-content {
@@ -23,8 +23,24 @@
 
 
 
-.top {
-	top: 100%;
+
+.ui-grid-col-3 glitch{
+	background-color: #cccccc;
+	border: none !important;
+	padding: 10px 10px;
+	text-align: right;
+	vertical-align: center;
+	font-size: 70% !important
 }
+
+.glitch-btn-normal{
+	background-color: #cccccc;
+}
+
+.glitch-btn-alarm {
+	background-color: #cc2222;
+}
+
+
 /* for update only*/
 

@@ -7,36 +7,34 @@
 	styleClass="content-panel">
 
 	<div class="ui-grind ui-grid-responsive">
-
- 				<h4> Ergebnisse</h4>
-				<div class="ui-grind ui-grid-responsive">
-					<div class="ui-grid-row">
-						<div class="ui-grid-col-4">
-							<h:outputText value = "Anzahl Würfel: "/>
-							<p:outputLabel id="anzahlWürfelOL" name="AnzahlWürfwlOL" value="#{würfelPool.anzahlWürfel}" />
-						</div>
-					</div>
-					<div class="ui-grid-row">
-						<div class="ui-grid-col-4">
-							<h:outputText value="Anzahl Erfolge: " />
-							<p:outputLabel id="anzahlErfolgeOL" name="AnzahlErfolgelOL" value="#{würfelPool.anzahlErfolge}" />
-						</div>
-					</div>
-					<div class="ui-grid-row">
-						<div class="ui-grid-col-4">
-							<h:outputText value="Anzahl Einsen: " />
-							<p:outputLabel id="anzahlEinsemOL" name="AnzahlEinsenOL" value="#{würfelPool.anzahlEinsen}" />
-						</div>
-					</div>
+		<h4> Ergebnisse</h4>
+		<div class="ui-grind ui-grid-responsive">
+			<div class="ui-grid-row" align="left">
+				<div class="ui-grid-col-4">
+					<h:outputText value = "Anzahl Würfel: "/>
+					<p:outputLabel id="anzahlWürfelOL" name="AnzahlWürfwlOL" value="#{würfelPool.anzahlWürfel}" />
 				</div>
-				<div class="ui-grid-row">
-					<div class="ui-grid-col-12">
-						<h:outputText value="Würfelergebnisse: " />
-					</div>
-					<div>
-						<p:outputLabel id="ErgebnisListe" value="#{würfelTablet.werteAusgabe}"/>
-					</div>
+			</div>
+			<div class="ui-grid-row">
+				<div class="ui-grid-col-4" align="left">
+					<h:outputText value="Anzahl Erfolge: " />
+					<p:outputLabel id="anzahlErfolgeOL" name="AnzahlErfolgelOL" value="#{würfelPool.anzahlErfolge}" />
 				</div>
-
+			</div>
+			<div class="ui-grid-row" align="left">
+				<div class="ui-grid-col-4">
+					<h:outputText value="Anzahl Einsen: " />
+					<p:outputLabel id="anzahlEinsemOL" name="AnzahlEinsenOL" value="#{würfelPool.anzahlEinsen}" />
+				</div>
+			</div>
+		</div>
+		<div class="ui-grid-row" align="left">
+			<div class="ui-grid-col-12">
+				<h:outputText value="Würfelergebnisse: " />
+			</div>
+			<div>
+				<p:outputLabel id="ErgebnisListe" value="#{würfelTablet.werteAusgabe}"/>
+			</div>
+		</div>
 	</div>
 </p:outputPanel>

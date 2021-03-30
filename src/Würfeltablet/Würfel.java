@@ -18,82 +18,82 @@ public class Würfel implements Serializable{
     
     
     public Würfel() {
-	super();
+    	super();
     }
     
     public void drehen() {
-	if (this.istAufZweiDrehbar() || this.istAufFünfDrehbar()) {
-	    this.wert++;
-	    berechnen();
-	}
+		if (this.istAufZweiDrehbar() || this.istAufFünfDrehbar()) {
+		    this.wert++;
+		    berechnen();
+		}
     }
     
     public void werfen() {
-	this.wert = (int)(Math.random()*(maxWert - minWert +1)+ minWert);
-	berechnen();
-    }
-    
-    private void berechnen() {
-	this.aufZweiDrehbar = istAufZweiDrehbar();
-	this.aufFünfDrehbar = istAufFünfDrehbar();
-	this.erfolg = istErfolg();
-	this.nichterfolg = istNichterfolg();
-	this.explodierenMöglich = istExplodierenMöglich();
-	this.glitchMöglich = istGlitchMöglich();
+		this.wert = (int)(Math.random()*(maxWert - minWert +1)+ minWert);
+		berechnen();
+	    }
+	    
+	    private void berechnen() {
+		this.aufZweiDrehbar = istAufZweiDrehbar();
+		this.aufFünfDrehbar = istAufFünfDrehbar();
+		this.erfolg = istErfolg();
+		this.nichterfolg = istNichterfolg();
+		this.explodierenMöglich = istExplodierenMöglich();
+		this.glitchMöglich = istGlitchMöglich();
     }
 
     private boolean istAufZweiDrehbar() {
-	if (this.wert == 1) {
-	    return true;
-	}
-	else {
-	    return false;
-	}   
+		if (this.wert == 1) {
+		    return true;
+		}
+		else {
+		    return false;
+		}   
     }
 
     private boolean istAufFünfDrehbar() {
-	if (this.wert == 4) {
-	    return true;
-	}
-	else {
-	    return false;
-	}   
+		if (this.wert == 4) {
+		    return true;
+		}
+		else {
+		    return false;
+		}   
     }
     
     private boolean istErfolg() {
-	if (this.wert == 5|| this.wert == 6) {
-	    return true;
-	}
-	else {
-	    return false;
-	}
+		if (this.wert == 5|| this.wert == 6) {
+		    return true;
+		}
+		else {
+		    return false;
+		}
     }
 
     private boolean istNichterfolg() {
-	if (this.wert <5) {
-	    return true;
-	}
-	else {
-	    return false;
-	}
+		if (this.wert <5) {
+		    return true;
+		}
+		else {
+		    return false;
+		}
     }
 
     private boolean istExplodierenMöglich() {
-	if (this.wert == 6) {
-	    return true;
-	}
-	else {
-	    return false;
-	}
+		if (this.wert == 6) {
+		    return true;
+		}
+		else {
+		    return false;
+		}
     }
 
     private boolean istGlitchMöglich() {
-	if (this.wert == 1) {
-	    return true;
-	}
-	else {
-	    return false;
-	}
+		if (this.wert == 1) {
+		    return true;
+		}
+		else {
+		    return false;
+		}
     }
 
     public boolean isMitEdgeGewürfelt() {
