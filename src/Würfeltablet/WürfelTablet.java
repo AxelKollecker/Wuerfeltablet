@@ -279,7 +279,6 @@ public class WürfelTablet implements Serializable{
     }
 
     public void edgePoolPlusEins(ActionEvent actionEvent) {
-    	System.out.println("edgePoolPlusEins gedückt");
     	if (actionEvent.getComponent().getId().equals("EdgePoolPlusEins") && edgePoolGröße < ep.getMaximalGröße()) {
     		ep.EdgePoolUmEinsErhöhen();
     		edgePoolGröße++;
@@ -290,7 +289,6 @@ public class WürfelTablet implements Serializable{
     public void onWürfelPoolGrößeChange(final AbstractAjaxBehaviorEvent event) {
     	if (würfelPoolGröße >= wp.getMinWürfel() && würfelPoolGröße <= wp.getMaxWürfel()) {
     		wp.setPoolGröße(würfelPoolGröße);
-    		this.edgePoolGröße = würfelPoolGröße;
     	}
     	else {
     		würfelPoolGröße = 0;

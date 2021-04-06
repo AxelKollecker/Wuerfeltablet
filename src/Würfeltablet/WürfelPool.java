@@ -2,15 +2,14 @@ package Würfeltablet;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Collections;
 import java.util.stream.Collectors;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.Stateful;
 import javax.enterprise.context.SessionScoped;
-import javax.inject.Inject;
 import javax.inject.Named;
 
 @Named
@@ -32,7 +31,7 @@ public class WürfelPool implements Serializable{
     
     @PostConstruct
     public void init (){
-    	würfelPool = new ArrayList<Würfel>();
+    	erzeugeNeuenPool(1);
     	bereinigen();
     }
     
@@ -164,6 +163,7 @@ public class WürfelPool implements Serializable{
     	for (Würfel w : würfelPool) {
     		w.werfen();
     	}
+    	Collections.sort(würfelPool);
     	berechnen();
     }
     

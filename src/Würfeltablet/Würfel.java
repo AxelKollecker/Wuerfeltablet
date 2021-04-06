@@ -3,7 +3,7 @@ package Würfeltablet;
 import java.io.Serializable;
 import java.util.Random;
 
-public class Würfel implements Serializable{
+public class Würfel implements Serializable, Comparable<Object>{
 	private static final long 	serialVersionUID = 1L;
 	private final int minWert = 1;
 	private final int maxWert = 6;
@@ -133,5 +133,19 @@ public class Würfel implements Serializable{
         return glitchMöglich;
     }
 
-    
+	@Override
+	public int compareTo(Object o) {
+		if (((Würfel) o).getWert() == 0 && this.getWert() == 0) {
+            return 0;
+        }
+        if (this.getWert() == 0) {
+            return -1;
+        }
+        if (((Würfel) o).getWert() == 0) {
+            return 1;
+        }
+        return this.getWert() - ((Würfel) o).getWert();
+	}
+
+	
 }

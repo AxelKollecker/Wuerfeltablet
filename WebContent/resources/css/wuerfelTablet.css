@@ -41,6 +41,9 @@
 	background-color: #cc2222;
 }
 
+.ui-widget {
+font-size: 70% !important;
+}
 
 /* for update only*/
 
